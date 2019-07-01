@@ -120,7 +120,7 @@ class Notification(QtWidgets.QFrame):
         """ Set the notification message"""
         if isinstance(title, basestring):
             self._title = title
-            time = self._time.strftime('%-H:%M')
+            time = self._time.strftime('%H:%M')
             self.title_widget.setText("<b>{0}</b> ({1})".format(title, time))
         else:
             raise TypeError("setTitle requires string argument")
